@@ -19,9 +19,9 @@ socket.on('disconnect',function(){
     console.log('Disconnected from server');
 });
 
-socket.on('newEmail',function(email){
-    console.log('new Email',email);
-})
+// socket.on('newEmail',function(email){
+//     console.log('new Email',email);
+// })
 
 socket.on('NewMessage',function(Message){
     console.log('NewMessage',Message);
