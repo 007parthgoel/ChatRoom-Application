@@ -8,6 +8,6 @@ socket.on('disconnect',function(){
     console.log('Disconnected from server');
 });
 
-socket.on('NewMessage',function(Message){
+socket.on('newMessage',function(Message){
     console.log('NewMessage',Message);
 });

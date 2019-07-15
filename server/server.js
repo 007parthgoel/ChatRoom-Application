@@ -16,11 +16,31 @@ io.on('connection',(socket)=>{
 
     socket.on('createMessage',(message)=>{
         console.log('createMessage',message);
-          io.emit('newMessage',{
+        io.emit('newMessage',{
             from:message.from,
             text:message.text,
             createdAt: new Date().getTime()
         });
+    });
+
+    // io.emit('newMessage',{
+    //     from:"samir goel",
+    //     text:"parth goel",
+    //     createdAt: new Date().getTime()
+    // });
+
+    // socket.emit('newMessage',{
+    //     from:"parth",
+    //     text:"good work",
+    //     createdAt: new Date().getTime()
+    // });
+
+    socket.on('mail',(message)=>{
+        console.log('mail was received',message);
+    });
+
+    socket.on('newMessage',(message)=>{
+        console.log('newMessage was received',message);
     });
 
     socket.on('disconnect',()=>{
