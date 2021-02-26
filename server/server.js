@@ -8,7 +8,7 @@ const {isRealString}=require('./utils/validation');
 const {Users}=require('./utils/user');
 
 const publicpath=path.join(__dirname,'../public');
-const port=process.env.PORT || 3000;
+const port=process.env.PORT || 8000;
 var app=express();
 var server=http.createServer(app);
 var io=SocketIO(server);
